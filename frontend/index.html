@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/app.js" type="module"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Tournoi Sport Ardent Tournament 2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Happy+Monkey&family=Lemonada:wght@300..700&family=Merienda:wght@300..900&family=Sofadi+One&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<body>
+    <div id="container">
+        <div id="courts">
+            <div id="ads">
+                <div id="ad-1" class="display-none" style="
+                    font-size: 6dvh;
+                    font-weight: bold;"
+                >
+                    <div>Avec le soutien de</div>
+                    <img src="img/liege-sport.png" alt="" style="width: 80%;">
+                    <div style="
+                        color: #de0038;
+                    ">With the support of</div>
+                </div>
+                <div id="ad-2" class="display-none" style="
+                    background-color: #288652;
+                    color: #a1eec3;
+                    font-family: Tourney, sans-serif;
+                    font-optical-sizing: auto;
+                    font-variation-settings: 'wdth' 100;
+                ">
+                    <div style="
+                        font-size: 6dvh;
+                        font-weight: bold;"
+                    >Matches en 2 sets de 11 points</div>
+                    <div style="
+                        font-size: 3dvh;
+                        font-style: italic;
+                        font-family: sans-serif;"
+                    >Annonce tes résultats à la table des points !</div>
+                    <img src="img/volant.png" alt="" style="
+                        width: 40%"
+                    >
+                    <div style="
+                        font-size: 6dvh;
+                        font-weight: bold;"
+                    >Matches in 2 sets of 11 points</div>
+                    <div style="
+                        font-size: 3dvh;
+                        font-style: italic;
+                        font-family: sans-serif;"
+                    >Report your score to the points table!</div>
+                </div>
+                <div id="ad-3" class="display-none" style="
+                    background-color: #ffc400;
+                    color: #cf7100;
+                    font-size: 4.5dvh;
+                    font-weight: 700;
+                    font-family: Lemonada, cursive;
+                ">
+                    <div>Profite de fruits gratuits entre tes matches</div>
+                    <img src="img/fruits.png" alt="" style="width: 50%;">
+                    <div>Enjoy fruits for free between matches</div>
+                </div>
+                <div id="ad-4" class="display-none" style="
+                    background-color: #a9ecff;
+                    color: #49ccff;
+                    font-size: 7dvh;
+                    font-weight: 400;
+                    font-family: 'Cherry Bomb One', system-ui;
+                ">
+                    <div>Hydrate-toi régulièrement</div>
+                    <img src="img/gourde.png" alt="" style="height: 50%;">
+                    <div>Hydrate frequently</div>
+                </div>
+                <div id="ad-5" class="display-none" style="
+                    background-color: #a96d64;
+                    color: #462017;
+                    font-size: 6dvh;
+                    font-family: Merienda, cursive;
+                    font-optical-sizing: auto;
+                ">
+                    <div>La cafétéria est ouverte</div>
+                    <img src="img/cafe.png" alt="" style="width: 15%;">
+                    <div>The cafeteria is open</div>
+                </div>
+                <div id="ad-6" class="display-none" style="
+                    background-color: #999;
+                    color: #333;
+                    font-size: 6dvh;
+                    font-family: 'Happy Monkey', system-ui;
+                    font-weight: bold;
+                ">
+                    <div>Soirée à Liège - 22h30</div>
+                    <img src="img/soiree.png" alt="" style="width: 50%;">
+                    <div>Party in Liège - 22h30</div>
+                </div>
+                <div id="id-7" class="display-none" style="
+                    background-color: white;
+                    color: #235a30;
+                    font-size: 6dvh;
+                    font-family: 'Sofadi One', system-ui;
+                ">
+                    <div>Marche sportive - dimanche 13h</div>
+                    <div>Sportive walk - Sunday 1 pm</div>
+                    <img src="img/foret.png" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <div id="next-match"></div>
+    </div>
+    <template id="template-court">
+        <div class="court">
+            <div class="court-name-fr"></div>
+            <div class="court-number-large"></div>
+            <div class="court-details">
+                <div class="first-team-emoji emoji"></div>
+                <div class="first-team"></div>
+                <div class="court-teams-sep"><img src="img/vs.png" alt=""></div>
+                <div class="second-team"></div>
+                <div class="second-team-emoji emoji"></div>
+            </div>
+            <div class="court-name-en"></div>
+        </div>
+    </template>
+</body>
+
+</html>

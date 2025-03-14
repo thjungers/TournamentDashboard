@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#container {
+    width: 100vw;
+    height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction: column;
+}
+
+#next-match {
+    width: 100%;
+    height: 10dvh;
+    text-align: center;
+    font-size: 2em;
+    background-color: aliceblue;
+    vertical-align: middle;
+    line-height: 10dvh;
+}
+
+#next-match::before {
+    content: "À suivre ⇝";
+    left: 0;
+    padding-left: 1em;
+}
+
+#next-match::after {
+    content: "⇜ Up next";
+    right: 0;
+    padding-right: 1em;
+}
+
+#next-match::before, #next-match::after {
+    position: absolute;
+    color: rgb(19, 69, 119);
+    text-shadow: 0 0 7px rgb(192, 155, 31);
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#courts {
+    flex-grow: 1;
+    width: 100%;
+    height: 90dvh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#court-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#court-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#court-3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#court-4 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#court-5 {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#court-6 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#court-7 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#court-8 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#court-9 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#court-10 {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.court-unavailable {
+    visibility: hidden;
+}
+
+.court-free-play .court-teams-sep, .court-free-play .emoji {
+    display: none;
+}
+
+.court-free-play {
+    background-image: 
+    repeating-linear-gradient(
+        -45deg, 
+        transparent, 
+        transparent 1rem,
+        #dfe0c7 1rem,
+        #dfe0c7 2rem
+    );
+    background-size: 200% 200%;
+    animation: barberpole 10s linear infinite;
+}
+
+.court-free-play::before {
+    content: "Jeu libre / Free play";
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: absolute;
+    text-align: center;
+    font-size: 8dvh;
+    line-height: 16dvh;
+    font-style: italic;
+    color: #646554;
+}
+
+.court {
+    margin: .3em;
+    background-color: rgb(246, 244, 242);
+    border-radius: 15px;
+    position: relative;
+}
+
+.court-name-fr, .court-name-en {
+    font-size: 1em;
+    font-style: italic;
+    position: absolute;
+}
+
+.court-name-fr {
+    padding-left: 1em;
+    top: 0;
+    left: 0;
+}
+
+.court-name-en {
+    text-align: right;
+    padding-right: 1em;
+    bottom: 0;
+    right: 0;
+}
+
+.court-number-large {
+    font-size: 6.5em;
+    position: absolute;
+    font-style: italic;
+    padding-left: .5em;
+    opacity: .1;
+}
+
+.court-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2em;
+    font-size: 2em;
+}
+
+.first-team, .second-team {
+    white-space: initial;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    max-width: 40%;
+}
+
+.court-teams-sep {
+}
+
+.court-teams-sep img {
+    width: 10dvh;
+}
+
+.emoji {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6dvh;
+}
+
+.winner {
+    content: "👑";
+    position: absolute;
+    top: -1em;
+    font-size: 3em;
+}
+
+.match-pending {
+    background-image: 
+        repeating-linear-gradient(
+            -45deg, 
+            transparent, 
+            transparent 1rem,
+            #ddd 1rem,
+            #ddd 2rem
+        );
+    background-size: 200% 200%;
+    animation: barberpole 10s linear infinite;
+}
+
+@keyframes barberpole {
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#ads {
+    grid-row: 1 / 6;
+    grid-column: 2;
+}
+
+#ads div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    text-align: center;
+}
+
+.display-none {
+    display: none !important;
+}
